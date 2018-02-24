@@ -1,0 +1,1 @@
+a template for ssm-project including spring mybatis basic configurations.
