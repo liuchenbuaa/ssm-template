@@ -29,21 +29,18 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="typeAliasesPackage" value="com.zhuo.framework.model"/>
-        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!--property name="mapperLocations" value="com/zhuo/framework/mapper/*.xml"/-->
+        <!--property name="configLocation" value="classpath:mybatis-config.xml"/-->
     </bean>
 
-    <!-- <property name="mapperLocations" value="classpath*:mybatis/*.xml"/> -->
-
-    <!--
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.coohua.news.mapper"/>
+        <property name="basePackage" value="com.zhuo.framework.mapper"/>
         <property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate"/>
     </bean>
-    -->
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
