@@ -18,7 +18,7 @@ public class UserMapperTest extends BaseTest{
     @Test
     public void Test(){
         SqlSession session = sqlSessionFactory.openSession();
-        UserMapper userMapper = session.getMapper(UserMapper.class);
+        AllMapper userMapper = session.getMapper(AllMapper.class);
         User user = userMapper.getUser(1);
         System.out.println(user);
         session.close();

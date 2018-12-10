@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zhuo.framework.mapper.UserMapper">
+<mapper namespace="com.zhuo.framework.mapper.AllMapper">
     <select id="getUser" resultType="com.zhuo.framework.model.User">
-        select * from User where id = #{id}
+        select * from user where id = #{id}
     </select>
+
+    <select id="getPost" resultType="com.zhuo.framework.model.Post">
+        select * from post where id = #{id}
+    </select>
+
+    <select id="getPostList" resultType="com.zhuo.framework.model.Post">
+        select * from post where id = #{id}
+    </select>
+
+    <select id="getComment" resultType="com.zhuo.framework.model.Comment">
+        select * from comment where id = #{id}
+    </select>
+
+    <select id="getFriends" resultType="com.zhuo.framework.model.Relation">
+        select * from post where id = #{id}
+    </select>
+
 </mapper>
